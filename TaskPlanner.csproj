@@ -120,17 +120,12 @@
     </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="ConexionMsql.cs" />
+    <Compile Include="Control.cs" />
     <Compile Include="Informacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion.Designer.cs">
       <DependentUpon>Informacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InicioP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InicioP.Designer.cs">
-      <DependentUpon>InicioP.cs</DependentUpon>
     </Compile>
     <Compile Include="Insertar.cs">
       <SubType>Form</SubType>
@@ -138,6 +133,13 @@
     <Compile Include="Insertar.Designer.cs">
       <DependentUpon>Insertar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +154,13 @@
     <Compile Include="Recordatorios.Designer.cs">
       <DependentUpon>Recordatorios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar.Designer.cs">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sesion.cs" />
     <Compile Include="TareasRecientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,17 +169,18 @@
     </Compile>
     <Compile Include="tipo_tarea.cs" />
     <Compile Include="tipo_tareaConsulta.cs" />
+    <Compile Include="Usuarios.cs" />
     <EmbeddedResource Include="Ayuda.resx">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion.resx">
       <DependentUpon>Informacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicioP.resx">
-      <DependentUpon>InicioP.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Insertar.resx">
       <DependentUpon>Insertar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -183,9 +193,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Recordatorios.resx">
       <DependentUpon>Recordatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar.resx">
+      <DependentUpon>Registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TareasRecientes.resx">
       <DependentUpon>TareasRecientes.cs</DependentUpon>
@@ -206,6 +220,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="IconoTask.ico" />
+    <None Include="Resources\ImagenUsuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

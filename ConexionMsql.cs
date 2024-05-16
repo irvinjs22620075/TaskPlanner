@@ -8,28 +8,31 @@ using System.Windows;
 
 namespace TaskPlanner
 {
-    internal class ConexionMsql:Conexion
+    internal class ConexionMysql : Conexion
     {
         private MySqlConnection connection;
-        private string cadenaConexion; 
-        public ConexionMsql() {
-            cadenaConexion = "Database=" + database +
-                "; DataSource=" + server +
-                "; User id=" + user +
-                "; Password=" + password;
-            connection = new MySqlConnection(cadenaConexion);
+
+        public ConexionMysql()
+        {
+            // Utilizando el método GetConexion() de la clase base
+            connection = getConexion();
         }
+
         public MySqlConnection GetConnection()
         {
-            try {
-                if (connection.State != System.Data.ConnectionState.Open) {
+            try
+            {
+                if (connection.State != System.Data.ConnectionState.Open)
+                {
                     connection.Open();
                 }
-            } catch (Exception e){
+            }
+            catch (Exception e)
+            {
                 MessageBox.Show(e.ToString());
             }
             return connection;
         }
-
     }
+
 }

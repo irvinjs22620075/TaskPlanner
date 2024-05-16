@@ -10,11 +10,11 @@ namespace TaskPlanner
 {
     internal class tipo_tareaConsulta
     {
-        private ConexionMsql conexionMsql;
+        private Conexion conexionMsql;
         private List<tipo_tarea> mTareas;
         public tipo_tareaConsulta()
         {
-            conexionMsql = new ConexionMsql();
+            conexionMsql = new Conexion();
             mTareas = new List<tipo_tarea>();
         }
 
@@ -35,7 +35,7 @@ namespace TaskPlanner
 
                 }
                 MySqlCommand mComando = new MySqlCommand(QUERY);
-                mComando.Connection = conexionMsql.GetConnection();
+                mComando.Connection = Conexion.getConexion();
               mnReader = mComando.ExecuteReader();
 
                 tipo_tarea mTarea = null;

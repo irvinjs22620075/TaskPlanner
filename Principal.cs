@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TaskPlanner
 {
     public partial class Inicio : Form
@@ -118,7 +119,8 @@ namespace TaskPlanner
 
         private void BotonInicio_Click(object sender, EventArgs e)
         {
-            AbrirFormhijo(new InicioP());
+           // AbrirFormhijo(new Registrar());
+            AbrirFormhijo(new Login());
                 }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
